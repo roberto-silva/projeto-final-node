@@ -24,7 +24,6 @@ export class ProductListComponent implements OnInit{
   loadAllProduct(): void {
     this.productService.getAllProduct().subscribe({
       next: (value: any) =>  {
-        console.log(value);
         this.product = value;
         this.toastrService.success("Loading products");
       },
