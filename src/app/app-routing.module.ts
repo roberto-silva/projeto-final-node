@@ -12,7 +12,8 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./modules/login/login.module').then((mod) => mod.LoginModule),
     canActivate: []
-  }
+  },
+  {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({

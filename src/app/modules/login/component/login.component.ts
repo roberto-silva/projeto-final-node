@@ -10,8 +10,8 @@ import {LoginService} from "../login.service";
 export class LoginComponent {
 
   userCredentialsForm: FormGroup = this.formBuilder.group({
-    username: ['admin@gmail.com', Validators.required],
-    password: ['Admin@123', Validators.required]
+    login: ['administrador', Validators.required],
+    senha: ['123', Validators.required]
   });
 
   constructor(
