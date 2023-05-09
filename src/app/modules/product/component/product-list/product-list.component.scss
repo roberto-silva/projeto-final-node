@@ -1,0 +1,56 @@
+.product-list {
+
+  .header {
+    h1 {
+      color: var(--caribbean-green);
+    }
+  }
+
+  .list {
+    text-align: center;
+
+    .card {
+      min-height: 12rem;
+
+      .card-header {
+        background: var(--very-light-blue);
+        color: var(--white);
+      }
+
+      .card-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-size: 5rem;
+          color: var(--caribbean-green);
+          cursor: pointer;
+        }
+
+        span:hover {
+          color: var(--very-light-blue);
+          transition: 300ms;
+        }
+      }
+
+      .card-footer {
+        background: var(--very-light-blue);
+      }
+
+      button {
+        width: 6.5rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      .danger {
+        color: var(--caribbean-green);
+        border-color: var(--caribbean-green);
+      }
+
+
+    }
+  }
+
+}

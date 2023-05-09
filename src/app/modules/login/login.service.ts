@@ -21,7 +21,7 @@ export class LoginService {
   login(userCredentials: UserCredentials) {
     this.authService.getAccessToken(userCredentials).subscribe({
       next: (value: HttpResponse<any>) =>  {
-        this.successfulLogin(value.body);
+        this.successfulLogin(value.body.token);
         this.toastrService.success("Login successful.");
         this.router.navigate(['']).then();
       },

@@ -1,0 +1,45 @@
+<section class="product-list">
+  <div class="header mb-5">
+    <h1>Product</h1>
+  </div>
+
+  <div class="list">
+    <ng-container [ngTemplateOutlet]="productList" [ngTemplateOutletContext]="{items: product}"></ng-container>
+  </div>
+</section>
+
+
+<ng-template #productList let-items="items">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card mb-3">
+        <div class="card-header">
+          <h6 class="w-100">Novo produto</h6>
+        </div>
+        <div class="card-body">
+          <span class="material-symbols-outlined">add_circle</span>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngFor="let item of items">
+      <div class="col-lg-3">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h6 class="w-100">{{item.descricao}}</h6>
+          </div>
+          <div class="card-body">
+            <h6 class="w-100 mb-3">{{item.marca}}</h6>
+            <h6 class="w-100">{{item.valor | currency:'BRL':true:'1.2-2'}}</h6>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-around">
+              <button type="button" class="btn btn-primary btn-sm">Editar</button>
+              <button type="button" class="btn btn-primary danger btn-sm">Deletar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+</ng-template>
