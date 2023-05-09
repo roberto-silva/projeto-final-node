@@ -30,7 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/theme/colors.scss",
+              "src/assets/theme/variables.scss"
             ],
             "scripts": []
           },
