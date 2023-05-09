@@ -1,0 +1,45 @@
+button.btn.btn-primary {
+  background-color: var(--very-light-blue);
+  border: var(--ghost-white) 2px solid;
+}
+
+button.btn.btn-primary:focus {
+  background-color: var(--very-light-blue);
+  color: var(--ghost-white);
+}
+
+label {
+  margin-left: 10px;
+  color: var(--ghost-white);
+}
+
+h1 {
+  color: var(--ghost-white);
+  font-weight: bolder;
+}
+
+input.form-control,
+textarea.form-control {
+  background-color: var(--very-light-blue);
+  color: var(--ghost-white);
+}
+
+input.form-control:disabled,
+textarea.form-control:disabled {
+  background-color: var(--grey);
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  background-color: var(--very-light-blue-dark);
+  color: var(--ghost-white);
+}
+
+button.btn.btn-primary:hover,
+input:hover, button:hover {
+  border: var(--caribbean-green) 2px solid;
+}
+
+.form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
+  height: 64px;
+}
