@@ -5,6 +5,7 @@ import {HOME_ROUTE} from "./home.route";
 import {HomeComponent} from "./component/home.component";
 import {NavbarComponent} from "../core/component/navbar/navbar.component";
 import {SidebarComponent} from "../core/component/sidebar/sidebar.component";
+import {ProductModule} from "../modules/product/product.module";
 
 @NgModule({
   declarations: [

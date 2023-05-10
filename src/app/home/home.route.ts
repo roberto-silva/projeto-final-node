@@ -9,6 +9,15 @@ export const HOME_ROUTE: Route = {
     pageTitle: 'Home',
   },
   children: [
-
+    {
+      path: '',
+      redirectTo: '/products',
+      pathMatch: 'full',
+    },
+    {
+      path: 'products',
+      loadChildren: () => import('../modules/product/product.module').then((mod) => mod.ProductModule),
+      canActivate: []
+    },
   ]
 };

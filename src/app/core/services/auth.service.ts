@@ -25,6 +25,6 @@ export class AuthService {
 }
 
 export class UserCredentials {
-  constructor(email: string, password: string) {
+  constructor(login: string, senha: string) {
   }
 }
