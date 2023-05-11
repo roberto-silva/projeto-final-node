@@ -1,0 +1,66 @@
+<div class="core-modal">
+  <div class="modal-header">
+    <h4 class="modal-title">Produto</h4>
+  </div>
+  <ng-container [ngTemplateOutlet]="modalBodyHeadTemplate"></ng-container>
+  <ng-container [ngTemplateOutlet]="modalBodyTemplate" [ngTemplateOutletContext]="{ form: formGroup }"></ng-container>
+  <ng-container [ngTemplateOutlet]="modalFooterTemplate"></ng-container>
+</div>
+
+<ng-template #modalBodyHeadTemplate>
+  <div class="modal-body modal-body-head">
+    <p *ngIf="!item?.id">Preencha os novos detalhes de produto</p>
+    <p *ngIf="item?.id">Editar detalhes do produto</p>
+  </div>
+</ng-template>
+
+<ng-template #modalBodyTemplate let-form="form">
+  <div class="modal-body">
+    <div class="app-category-edit">
+      <div class="core-base-edit">
+        <div class="core-body">
+          <form [formGroup]="form" *ngIf="form">
+
+            <div class="row">
+
+              <div class="col-lg-4 mb-3">
+                <label class="d-block font-weight-semibold mb-1" for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome"
+                       formControlName="nome"
+                       autocomplete="off"/>
+              </div>
+
+              <div class="col-lg-6 mb-3">
+                <label class="d-block font-weight-semibold mb-1" for="descricao">Descricao</label>
+                <input type="text" class="form-control" id="descricao"
+                       formControlName="descricao"
+                       autocomplete="off"/>
+              </div>
+              <div class="col-lg-2 mb-3">
+                <label class="d-block font-weight-semibold mb-1" for="valor">Valor</label>
+                <input type="text" class="form-control" id="valor" prefix="$ " mask="separator.3"
+                       formControlName="valor"
+                       autocomplete="off"/>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <label class="d-block font-weight-semibold mb-1" for="marca">Marca</label>
+                <input type="text" class="form-control" id="marca"
+                       formControlName="marca"/>
+              </div>
+
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #modalFooterTemplate>
+  <div class="modal-footer">
+    <button type="button" class="btn close-modal" (click)="activeModal.close('Close click')">Cancel</button>
+    <button type="button" class="btn confirm-modal" [disabled]="!formGroup.valid" (click)="save()">Confirm</button>
+  </div>
+</ng-template>
