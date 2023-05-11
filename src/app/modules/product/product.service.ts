@@ -15,4 +15,20 @@ export class ProductService {
   getAllProduct(): Observable<any>{
     return this.http.get(PRODUCTS_API);
   }
+  getProductById(id: any): Observable<any>{
+    return this.http.get(`${PRODUCTS_API}/${id}`);
+  }
+
+  postProduct(body: any): Observable<any> {
+    console.log(body)
+    return this.http.post(PRODUCTS_API, body);
+  }
+
+  putProduct(body: any): Observable<any>{
+    return this.http.put(`${PRODUCTS_API}/${body?.id}`, body);
+  }
+
+  deleteProduct(id: string): Observable<any> {
+    return this.http.delete(`${PRODUCTS_API}/${id}`);
+  }
 }

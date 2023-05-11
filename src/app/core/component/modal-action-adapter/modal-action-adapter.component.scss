@@ -1,0 +1,79 @@
+.core-modal {
+  .modal-dialog .modal-content {
+    padding: 0;
+  }
+
+  .modal-header {
+    background: var(--caribbean-green);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-color: white;
+    border-width: 3px;
+
+    .modal-title {
+      width: 100%;
+      font-size: 20px;
+      line-height: 23px;
+      color: white;
+    }
+  }
+
+  .modal-body {
+    min-height: 100px;
+    background: white !important;
+
+    p {
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: black;
+    }
+
+    .form-check label {
+      vertical-align: middle;
+      margin: auto;
+      padding: 0.5rem;
+      font-size: 12px;
+    }
+
+    .form-check-input:checked {
+      background-color: var(--palatinate-blue) !important;
+      border-color: var(--palatinate-blue) !important;
+    }
+  }
+
+  .modal-footer {
+    background: var(--caribbean-green) !important;
+    border-top: 2px solid #000000;
+
+    button {
+      border-radius: 2px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .close-modal {
+      background: #fdfdff;
+      color: #44495a;
+    }
+
+    .confirm-modal {
+      background: var(--very-light-blue);
+      color: #ffffff;
+    }
+  }
+
+  .modal-body-head {
+    min-height: 30px;
+    border-bottom: 2px solid var(--palatinate-blue);
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: black;
+    }
+  }
+}

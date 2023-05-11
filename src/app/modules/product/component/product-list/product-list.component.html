@@ -12,7 +12,7 @@
 <ng-template #productList let-items="items">
   <div class="row">
     <div class="col-lg-3">
-      <div class="card mb-3">
+      <div class="card mb-3" (click)="goToNewProduct()">
         <div class="card-header">
           <h6 class="w-100">Novo produto</h6>
         </div>
@@ -33,8 +33,9 @@
           </div>
           <div class="card-footer">
             <div class="d-flex justify-content-around">
-              <button type="button" class="btn btn-primary btn-sm">Editar</button>
-              <button type="button" class="btn btn-primary danger btn-sm">Deletar</button>
+              <button type="button" class="btn btn-primary btn-sm" (click)="gotToEditProduct(item)">Editar</button>
+              <button type="button" class="btn btn-primary danger btn-sm" (click)="gotToRemoveProduct(item)">Deletar
+              </button>
             </div>
           </div>
         </div>
