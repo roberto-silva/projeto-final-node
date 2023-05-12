@@ -28,6 +28,7 @@ export class ProductListComponent implements OnInit {
   }
 
   loadAllProduct(): void {
+    console.log('teste')
     this.productService.getAllProduct().subscribe({
       next: (value: any) => {
         this.product = value;
@@ -63,21 +64,18 @@ export class ProductListComponent implements OnInit {
     });
     this.modalRef.componentInstance.title = 'Remover um produto';
     this.modalRef.componentInstance.body = 'Você tem certeza que deseja remover?';
-    this.modalRef.result
-      .then((results: any) => {
+    this.modalRef.result.then((results: any) => {
         if (results) {
           this.productService.deleteProduct(item?.id).subscribe({
             next: (value: any) => {
               this.toastrService.success("Produto removido com sucesso!");
-            },
-            error: (error: any) => {
-              this.toastrService.error(error.message);
             }
           });
         }
       })
       .catch(() => {
       });
+    this.onClosedModal();
   }
 
   private onClosedModal(): void {

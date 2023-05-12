@@ -22,31 +22,25 @@
           <form [formGroup]="form" *ngIf="form">
 
             <div class="row">
-
+              <div class="col-lg-8 mb-3">
+                <label class="d-block font-weight-semibold mb-1" for="marca">Marca</label>
+                <input type="text" class="form-control" id="marca"
+                       formControlName="marca"/>
+              </div>
               <div class="col-lg-4 mb-3">
-                <label class="d-block font-weight-semibold mb-1" for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome"
-                       formControlName="nome"
-                       autocomplete="off"/>
-              </div>
-
-              <div class="col-lg-6 mb-3">
-                <label class="d-block font-weight-semibold mb-1" for="descricao">Descricao</label>
-                <input type="text" class="form-control" id="descricao"
-                       formControlName="descricao"
-                       autocomplete="off"/>
-              </div>
-              <div class="col-lg-2 mb-3">
                 <label class="d-block font-weight-semibold mb-1" for="valor">Valor</label>
                 <input type="text" class="form-control" id="valor" prefix="$ " mask="separator.3"
                        formControlName="valor"
                        autocomplete="off"/>
               </div>
-              <div class="col-lg-4 mb-3">
-                <label class="d-block font-weight-semibold mb-1" for="marca">Marca</label>
-                <input type="text" class="form-control" id="marca"
-                       formControlName="marca"/>
+
+              <div class="col-lg-12 mb-3">
+                <label class="d-block font-weight-semibold mb-1" for="descricao">Descricao</label>
+                <input type="text" class="form-control" id="descricao"
+                       formControlName="descricao"
+                       autocomplete="off"/>
               </div>
+
 
             </div>
 

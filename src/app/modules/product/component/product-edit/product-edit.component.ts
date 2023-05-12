@@ -17,7 +17,6 @@ export class ProductEditComponent implements OnInit {
 
   formGroup: FormGroup = this.formBuilder.group({
     id: [null, []],
-    nome: [null, [Validators.required]],
     descricao: [null, [Validators.required]],
     valor: [null, [Validators.required]],
     marca: [null, [Validators.required]]
@@ -33,9 +32,6 @@ export class ProductEditComponent implements OnInit {
   ngOnInit(): void {
     this.getCurrentProduct();
     this.updateForm();
-    if (this.item?.id) {
-      this.formGroup.get('nome')?.disable();
-    }
   }
 
   getCurrentProduct(): void {
@@ -47,7 +43,6 @@ export class ProductEditComponent implements OnInit {
   updateForm(): void {
     if (this.item && this.item?.id) {
       this.formGroup.get('id')?.setValue(this.item?.id);
-      this.formGroup.get('nome')?.setValue(this.item?.nome);
       this.formGroup.get('descricao')?.setValue(this.item?.descricao);
       this.formGroup.get('valor')?.setValue(this.item?.valor);
       this.formGroup.get('marca')?.setValue(this.item?.marca);

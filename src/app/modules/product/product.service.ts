@@ -20,7 +20,6 @@ export class ProductService {
   }
 
   postProduct(body: any): Observable<any> {
-    console.log(body)
     return this.http.post(PRODUCTS_API, body);
   }
 
