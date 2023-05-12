@@ -10,12 +10,15 @@ import {ToastrModule, ToastrService} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {UserAuthenticated} from "./core/services/user-authenticated";
 import {HttpClientModule} from "@angular/common/http";
+import { ModalActionAdapterComponent } from './core/component/modal-action-adapter/modal-action-adapter.component';
+import {provideEnvironmentNgxMask} from "ngx-mask";
 
 export const TOAST_PROVIDER = {provide: ToastrService, useClass: ToastrService};
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalActionAdapterComponent
   ],
   imports: [
     HttpClientModule,
@@ -23,14 +26,15 @@ export const TOAST_PROVIDER = {provide: ToastrService, useClass: ToastrService};
     AppRoutingModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [
     HttpClientModule,
     AuthInterceptorProvider,
     ErrorInterceptorProvider,
     TOAST_PROVIDER,
-    UserAuthenticated
+    UserAuthenticated,
+    provideEnvironmentNgxMask()
   ],
   exports: [],
   bootstrap: [AppComponent]
