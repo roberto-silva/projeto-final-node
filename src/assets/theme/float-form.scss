@@ -1,0 +1,40 @@
+.general-float-form {
+  width: 450px;
+  height: auto;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  background-color: var(--very-light-blue);
+  color: var(--ghost-white);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .logo {
+    width: 70px;
+    margin: 10px;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .general-float-form {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50px 50px 0 0;
+  }
+}
+
+.sign-up-text {
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.sign-up-link {
+  margin-left: 10px;
+  color: var(--caribbean-green);
+  font-weight: 600;
+}

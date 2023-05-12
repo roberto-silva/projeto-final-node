@@ -1,6 +1,6 @@
 button.btn.btn-primary {
   background-color: var(--very-light-blue);
-  border: var(--ghost-white) 2px solid;
+  border: var(--ghost-white) 1px solid;
 }
 
 button.btn.btn-primary:focus {
@@ -25,8 +25,9 @@ textarea.form-control {
 }
 
 input.form-control:disabled,
-textarea.form-control:disabled {
-  background-color: gainsboro;
+textarea.form-control:disabled
+{
+  background-color: var(--very-light-blue);
 }
 
 input.form-control:focus,
@@ -38,8 +39,22 @@ textarea.form-control:focus {
 button.btn.btn-primary:hover,
 input:hover, button:hover {
   border: var(--caribbean-green) 2px solid;
+  color: var(--caribbean-green);
 }
 
 .form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
   height: 64px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:first-line {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--ghost-white);
+}
+
+input:-webkit-autofill:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--caribbean-green);
 }
