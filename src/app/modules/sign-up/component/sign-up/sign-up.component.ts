@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {User} from "../../../../models/user.model";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SignUpService} from "../../sign-up.service";
@@ -12,7 +12,6 @@ import {Router} from "@angular/router";
 })
 export class SignUpComponent {
 
-  user: User = new User({});
   signUpFormGroup: FormGroup = this.formBuilder.group({
     nome: [undefined, Validators.required],
     login: [undefined, Validators.required],
@@ -30,10 +29,10 @@ export class SignUpComponent {
   }
 
   signUp() {
-    this.signUpService.signUp(this.user).subscribe({
+    this.signUpService.signUp(new User(this.signUpFormGroup.value)).subscribe({
       next: () => {
         this.toastrService.success("Login successful.");
-        this.router.navigate(['']).then();
+        this.router.navigate(['/login']).then();
       },
       error: (error: any) => {
         this.toastrService.error(error.message);
