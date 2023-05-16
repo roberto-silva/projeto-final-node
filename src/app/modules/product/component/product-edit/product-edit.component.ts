@@ -70,11 +70,12 @@ export class ProductEditComponent implements OnInit {
 
   protected insertOrUpdate(): Observable<any> {
     const form: any = this.formGroup.value;
-    if (!this.item?.id) {
+    const there_is_id = this.formGroup.get('id')?.value;
+    if (!there_is_id) {
       delete form.id;
     }
 
-    return this.item?.id
+    return there_is_id
       ? this.productService.putProduct(form)
       : this.productService.postProduct(form)
   }

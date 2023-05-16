@@ -28,7 +28,6 @@ export class ProductListComponent implements OnInit {
   }
 
   loadAllProduct(): void {
-    console.log('teste')
     this.productService.getAllProduct().subscribe({
       next: (value: any) => {
         this.product = value;

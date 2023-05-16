@@ -4,6 +4,7 @@
 
 export const environment = {
   BASE_URL: 'http://34.228.17.139:3001/',
+  //BASE_URL: 'http://localhost:3001/',
   production: false,
 };
 

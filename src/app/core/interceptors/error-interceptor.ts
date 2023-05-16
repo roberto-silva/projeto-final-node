@@ -29,7 +29,7 @@ export class ErrorInterceptor implements HttpInterceptor {
         this.toastrService.warning("The logged user does not have permission to access this resource.");
       }
 
-      throw new Error(error);
+      throw error.error;
     }));
   }
 
