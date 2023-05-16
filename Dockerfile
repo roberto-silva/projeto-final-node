@@ -1,5 +1,5 @@
 # Step 1: Build the app in image 'builder'
-FROM node:16-slim AS builder
+FROM node:18-slim AS builder
 LABEL maintainer="soft"
 
 WORKDIR /usr/src/app
