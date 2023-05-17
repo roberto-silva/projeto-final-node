@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  BASE_URL: 'http://54.87.13.94:3001/',
+  BASE_URL: 'https://projeto-final-node-front-final.onrender.com/',
   //BASE_URL: 'http://localhost:3001/',
   production: false,
 };
